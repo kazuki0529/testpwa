@@ -18,7 +18,8 @@
     "onsenui": "^2.9.2",
     "vue": "^2.5.2",
     "vue-onsenui": "^2.5.1",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.9.6"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.5",
