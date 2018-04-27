@@ -5,6 +5,11 @@ import App from './App'
 import router from './router'
 import {API_KEY_GOOGLE_MAP} from './constants/api_key'
 import * as VueGoogleMaps from 'vue2-google-maps'
+import VueOnsen from 'vue-onsenui' // This already imports 'onsenui'
+
+// Onsen UI Styling and Icons
+import 'onsenui/css/onsenui.css'
+import 'onsenui/css/onsen-css-components.css'
 
 Vue.config.productionTip = false
 
@@ -19,6 +24,11 @@ Vue.use(VueGoogleMaps, {
     libraries: 'places'
   }
 })
+
+/**
+ * Onsen-UI
+ */
+Vue.use(VueOnsen)
 
 new Vue({
   el: '#app',
