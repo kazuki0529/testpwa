@@ -2,7 +2,7 @@
   "name": "testpwa",
   "short_name": "testpwa",
   "icons": [{
-    "src": "/static/img/icons/mapkyodoco.png",
+    "src": "./img/icons/mapkyodoco.png",
     "sizes": "192x192",
     "type": "image/png"
   }],

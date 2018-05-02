@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view :bus='bus'></router-view>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
+
+const bus = new Vue()
+
 export default {
-  name: 'app'
+  name: 'app',
+  data () {
+    return {
+      bus: bus
+    }
+  },
+  created () {
+  }
 }
 </script>
 

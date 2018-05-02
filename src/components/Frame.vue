@@ -1,5 +1,5 @@
 <template id="tabs">
-  <v-ons-page>
+  <div>
     <NaviMenu></NaviMenu>
     <v-ons-tabbar position="auto"
       :tabs="tabs"
@@ -7,19 +7,22 @@
       :index.sync="activeIndex"
     >
     </v-ons-tabbar>
-  </v-ons-page>
+  </div>
 </template>
 
 <script>
-import NaviMenu from './NaviMenu'
-import MyMap from './MyMap'
-import Settings from './Settings'
+import NaviMenu from '@/components/NaviMenu'
+import MyMap from '@/components/MyMap'
+import Settings from '@/components/Settings'
 
 export default {
   name: 'frame',
+  props: ['bus'],
   components: {
     NaviMenu,
     MyMap
+  },
+  created () {
   },
   data () {
     return {
@@ -29,7 +32,7 @@ export default {
           icon: 'ion-ios-location',
           label: 'Map',
           page: MyMap,
-          props: {},
+          props: { bus: this.bus },
           key: 'mymap'
         },
         {
