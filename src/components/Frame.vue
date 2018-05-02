@@ -1,5 +1,5 @@
 <template id="tabs">
-  <div>
+  <v-ons-page>
     <NaviMenu></NaviMenu>
     <v-ons-tabbar position="auto"
       :tabs="tabs"
@@ -7,7 +7,7 @@
       :index.sync="activeIndex"
     >
     </v-ons-tabbar>
-  </div>
+  </v-ons-page>
 </template>
 
 <script>
