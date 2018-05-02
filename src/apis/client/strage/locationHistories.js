@@ -44,8 +44,13 @@ class LocationHistoriesAPI {
         options: {
           content: moment(location.timestamp).format('YYYY/MM/DD HH:mm:ss時点')
         }
-      }
+      },
+      timestamp: location.timestamp
     })
+    this.histories = this.histories
+      .sort(function (a, b) { return a.timestamp < b.timestamp })
+      .slice(0, 10)
+
     this.storage.setItem(this.storageKey, JSON.stringify(this.histories))
     this.bus.$emit(LOCATION_HISTORIES.CHANGED, this.histories)
   }
